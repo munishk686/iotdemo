@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Pagination, PaginationContent, PaginationItem, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
 import { Device } from "@/types/device";
-import Link from "next/link";
+
 
 type TableProps = {
   data: Device[];
