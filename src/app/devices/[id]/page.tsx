@@ -39,3 +39,7 @@
 //     </div>
 //   );
 // }
+
+export default function DevicePage() {
+  return <div>Device page coming soon</div>;
+}
