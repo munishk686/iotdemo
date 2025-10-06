@@ -1,0 +1,19 @@
+app/
+ ├─ layout.tsx        # Root layout (header/footer/wrapper for all pages)
+ ├─ page.tsx          # Home page (you can later show a dashboard or device list here)
+ ├─ globals.css       # Global styles
+ ├─ devices/          # Devices-related pages
+ │   ├─ page.tsx      # Devices list (table with sorting/pagination)
+ │   └─ [id]/page.tsx # Dynamic device details page
+ ├─ ticket/           # Ticket-related pages (optional for later)
+ │   └─ create/page.tsx
+components/           # Reusable UI components
+ ├─ Table.tsx         # Data table component
+ ├─ DeviceCard.tsx    # (optional) card view for a single device
+ └─ ui/               # Small UI building blocks (buttons, dropdown, etc.)
+utils/                # Helper functions
+ ├─ fetchData.ts      # Fetch JSON from S3
+ └─ formatters.ts     # Format status, dates, etc.
+types/                # TypeScript type definitions
+ └─ device.ts         # Device type/interface
+public/               # Static files (icons, images, etc.)
