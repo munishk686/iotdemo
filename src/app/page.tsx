@@ -1,49 +1,18 @@
-import React from "react";
+import Link from "next/link";
 
-// 1. Define the shape of your data
-interface Device {
-  device_id: string;
-  client_name: string;
-  client_ID: number;
-  timestamp: string;
-  battery_percentage: number;
-  battery_voltage: number;
-  temperature_celsius: number;
-  humidity_percent: number;
-  status: string;
-}
-
-interface DeviceResponse {
-  devices: Device[];
-}
-
-// 2. Fetch function with return type
-async function getData(): Promise<DeviceResponse> {
-  const res = await fetch("https://myadroid.s3.us-east-1.amazonaws.com/Adroit-Dummy-Data.json", {
-    cache: "no-store",
-  });
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-
-  return res.json();
-}
-
-// 3. Page component
-export default async function Page() {
-  const data = await getData();
-
+export default function HomePage() {
   return (
-    <div>
-      <h1>Fetched Data</h1>
-      <ul>
-        {data.devices.map((device) => (
-          <li key={device.device_id}>
-            {device.device_id} - {device.client_name} - {device.status}
-          </li>
-        ))}
-      </ul>
-    </div>
+    <main className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-blue-50 to-white text-center">
+      <h1 className="text-4xl font-bold text-gray-800 mb-4">Adroit IoT Dashboard</h1>
+      <p className="text-lg text-gray-600 mb-8">
+        Monitor your IoT devices in real-time with live data and insights.
+      </p>
+      <Link
+        href="/devices"
+        className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
+      >
+        View Devices
+      </Link>
+    </main>
   );
 }
