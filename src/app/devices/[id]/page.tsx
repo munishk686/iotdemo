@@ -1,4 +1,5 @@
 // app/devices/[id]/page.tsx
+export const dynamic = "force-dynamic";
 import { notFound } from "next/navigation";
 import type { Device } from "@/types/device";
 import Link from "next/link";
