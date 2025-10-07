@@ -1,13 +1,12 @@
 // app/devices/[id]/page.tsx
-export const dynamic = "force-dynamic";
+
 import { notFound } from "next/navigation";
 import type { Device } from "@/types/device";
 import Link from "next/link";
 
-// Type for page props
-type DevicePageProps = {
-  params: { id: string };
-};
+export const dynamic = "force-dynamic";
+
+
 
 // Fetch a single device by ID
 async function getDevice(id: string): Promise<Device | undefined> {
@@ -20,9 +19,13 @@ async function getDevice(id: string): Promise<Device | undefined> {
 }
 
 // Dynamic device page
-export default async function DevicePage({ params }: DevicePageProps) {
-  const device = await getDevice(params.id);
-
+export default async function DevicePage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  const device = await getDevice(id);
   if (!device) return notFound();
 
   return (
