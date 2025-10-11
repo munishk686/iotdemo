@@ -1,5 +1,7 @@
 import Table from "@/components/Table";
 import { Device } from "@/types/device";
+import Header from "@/components/Header/Header";
+
 
 // Fetch devices from S3
 async function getDevices(): Promise<Device[]> {
@@ -18,7 +20,7 @@ export default async function DevicesPage() {
 
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Devices</h1>
+     <Header />
       <Table data={devices} />
     </div>
   );
