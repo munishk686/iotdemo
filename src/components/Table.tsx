@@ -41,8 +41,7 @@ export default function Table({ data }: TableProps) {
             <th className="px-4 py-2 text-left">Status</th>
             <th className="px-4 py-2 text-left">Battery</th>
             <th className="px-4 py-2 text-left">Temperature</th>
-            <th className="px-4 py-2 text-left">Humidity</th>
-            <th className="px-4 py-2 text-left">Last Updated</th>
+          
           </tr>
         </thead>
         <tbody>
@@ -77,10 +76,7 @@ export default function Table({ data }: TableProps) {
               <td className="px-4 py-2">{device.status}</td>
               <td className="px-4 py-2">{device.battery_percentage}%</td>
               <td className="px-4 py-2">{device.temperature_celsius}°C</td>
-              <td className="px-4 py-2">{device.humidity_percent}%</td>
-              <td className="px-4 py-2">
-                {new Date(device.timestamp).toLocaleString()}
-              </td>
+             
             </tr>
           ))}
         </tbody>

@@ -2,23 +2,30 @@
 
 export default function Header() {
   return (
-    <header className="flex items-center justify-between  p-4 bg-blue-200  shadow-sm">
-      <div className="flex items-center justify-between w-full">
-        <div>
+    <header className="bg-blue-200 shadow-sm p-4">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        {/* Left logo */}
+        <div className="flex justify-center sm:justify-start w-full sm:w-auto">
           <img
-            src="assets/img/Adroit_logo.png"
-            alt="Logo"
-            className="w-30 h-20 "
+            src="/assets/img/Adroit_logo.png"
+            alt="Adroit Logo"
+            className="w-28 h-16 object-contain"
           />
         </div>
-        <div>
-          <h1 className="text-5xl font-bold text-gray-800">Frontend Manager</h1>
+
+        {/* Title */}
+        <div className="flex justify-center w-full sm:w-auto">
+          <h1 className="text-2xl sm:text-5xl font-bold text-gray-800 text-center sm:text-left">
+            Frontend Manager
+          </h1>
         </div>
-        <div>
+
+        {/* Right logo */}
+        <div className="flex justify-center sm:justify-end w-full sm:w-auto">
           <img
-            src="assets/img/Logo_of_Aut.png"
-            alt="Logo"
-            className="w-20 h-20 "
+            src="/assets/img/Logo_of_Aut.png"
+            alt="AUT Logo"
+            className="w-20 h-20 object-contain"
           />
         </div>
       </div>
