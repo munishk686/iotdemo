@@ -35,7 +35,7 @@ export default function Table({ data }: TableProps) {
         <thead className="bg-gray-100">
           <tr>
             <th className="px-1 py-2 text-left">Actions</th>
-            <th className="px-4 py-2 text-left">ID</th>
+            <th className="px-4 py-2 text-left">Device ID</th>
             <th className="px-4 py-2 text-left">Client Name</th>
             <th className="px-4 py-2 text-left">Client ID</th>
             <th className="px-4 py-2 text-left">Status</th>
