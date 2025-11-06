@@ -41,7 +41,7 @@ export default function Table({ data }: TableProps) {
             <th className="px-4 py-2 text-left">Status</th>
             <th className="px-4 py-2 text-left">Battery</th>
             <th className="px-4 py-2 text-left">Temperature</th>
-          
+
           </tr>
         </thead>
         <tbody>
@@ -60,13 +60,12 @@ export default function Table({ data }: TableProps) {
                         View Details
                       </Link>
                     </DropdownMenuItem>
-                    <DropdownMenuItem
-                      onClick={() =>
-                        alert(`Ticket created for ${device.device_id}`)
-                      }
-                    >
-                      Create Ticket
+                    <DropdownMenuItem asChild>
+                      <Link href={`/ticket/${device.device_id}`}>
+                        Create Ticket
+                      </Link>
                     </DropdownMenuItem>
+
                   </DropdownMenuContent>
                 </DropdownMenu>
               </td>
@@ -76,7 +75,7 @@ export default function Table({ data }: TableProps) {
               <td className="px-4 py-2">{device.status}</td>
               <td className="px-4 py-2">{device.battery_percentage}%</td>
               <td className="px-4 py-2">{device.temperature_celsius}°C</td>
-             
+
             </tr>
           ))}
         </tbody>

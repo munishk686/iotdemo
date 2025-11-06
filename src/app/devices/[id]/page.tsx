@@ -35,7 +35,7 @@ export default async function DevicePage({
         </h1>
       </div>
       <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-gray-800">
-        <p className="text-sm font-semibold text-gray-500 uppercase mb-2 tracking-wide">
+        <p className="text-lm font-bold text-black uppercase mb-2 tracking-wide">
           Device Details
         </p>
         <div className="space-y-2 text-left">
