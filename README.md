@@ -1,41 +1,33 @@
-# 🛰️ IoT Demo Dashboard
+#  IoT Demo Dashboard
 
-A full-stack **IoT monitoring web app** built with **Next.js**, **Tailwind CSS**, and deployed on **AWS EC2**.  
-This project visualizes sensor data, device metrics, and system status in a clean dashboard interface.
-
----
-
-## 🚀 Tech Stack
-- **Frontend:** Next.js (App Router), React, TypeScript, Tailwind CSS  
-- **Backend:** Next.js API Routes  
-- **Database:** (Mock / Static JSON for demo)  
-- **Hosting:** AWS EC2 (Ubuntu 22.04)  
-- **UI Components:** ShadCN UI, Lucide React icons  
-- **Tools:** Fetch API, Environment Variables, PM2, Nginx  
+A **frontend-only IoT dashboard** built with **Next.js**, **TypeScript**, and **Tailwind CSS**, visualising mock IoT device data.  
+The project simulates how IoT devices send status information and displays it in a clean, interactive dashboard interface.
 
 ---
 
-## 💡 Features
-- 📊 Real-time IoT device metrics dashboard  
-- ⚙️ Device status monitoring (Signal, Battery, In-situ, Scan)  
-- 📨 Support ticket creation demo  
-- 🔐 Authentication with protected routes  
-- 🧭 Breadcrumb-based navigation  
-- ☁️ Deployed on AWS EC2 with production setup  
+##  Tech Stack
+- **Framework:** Next.js (App Router)  
+- **Language:** TypeScript  
+- **Styling:** Tailwind CSS  
+- **UI Components:** ShadCN UI, Lucide React Icons  
+- **Hosting:** Vercel  
+- **Assets:** AWS S3 Bucket (for images/data storage)  
+---
+
+##  Features
+- 📊 Device metrics and status dashboard  
+- ⚙️ Fault identification and ticket creation demo  
+- 🧭 Breadcrumb and navigation system  
+- 🪄 Responsive design with Tailwind CSS  
+- ☁️ Hosted on **Vercel**, static + serverless friendly  
 
 ---
 
-## 🧱 Project Structure
+##  Getting Started
 
-
-
----
-
-## ⚙️ Getting Started
-
-### 1️⃣ Clone the repo
+##  Clone the repo
 ```bash
-git clone https://github.com/yourusername/iot-demo.git
+git clone https://github.com/munishk686/iot-demo.git
 cd iot-demo
 
 # Install dependencies
@@ -44,7 +36,7 @@ npm install
 # Run Locally
 npm run dev
 # What I Learned
-Setting up and deploying a Next.js app on AWS EC2
+Setting up Next.js, calling api from AWS and setting up S3 bucket.
 
 Managing dynamic routes and API calls in Next.js App Router
 
@@ -52,11 +44,8 @@ Creating modular UI components with Tailwind CSS
 
 Handling device data and simple backend communication
 
-Practical DevOps setup: PM2, Nginx, environment variables
-
 # Demo
-Live Demo:
-Video Walkthrough:
+Live Demo: https://iot.techmkumar.com/
 
 # Future Improvements
 Integrate real IoT data (MQTT / REST API)
@@ -71,6 +60,6 @@ Improve ticket creation workflow
 Name: Munish
 munishk686@gmail.com
 
-LinkedIn
+LinkedIn: https://www.linkedin.com/in/munishk686/
 
-Portfolio
+Portfolio: https://www.techmkumar.com/
